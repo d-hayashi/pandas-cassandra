@@ -2,17 +2,18 @@
 
 from setuptools import setup
 
-from pandra import __version__
-
 setup(
     name='pandra',
-    version=__version__.__version__,
-    author=__version__.__author__,
-    author_email=__version__.__author_email__,
+    version='0.1.1',
+    author='Xuzhou Qin',
+    author_email='xuzhou.qin@jcdecaux.com',
     url='https://github.com/qxzzxq/pandas-cassandra',
     packages=['pandra'],
     license='MIT',
     description='Use Pandas DataFrame with Cassandra',
     keywords=['pandas', 'cassandra', 'cql'],
-    install_requires=__version__.__dependencies__
+    install_requires=[
+        'cassandra-driver',
+        'pandas'
+    ]
 )
