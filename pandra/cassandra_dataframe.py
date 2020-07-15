@@ -169,7 +169,7 @@ class CassandraDataFrame(pd.DataFrame):
         logger.info('Successfully inserted {} rows.'.format(self.shape[0]))
 
     @classmethod
-    def from_cassandra(cls, cassandra_session, cql_command, async=False):
+    def from_cassandra(cls, cassandra_session, cql_command):
         # TODO: add async method
         # TODO: auto detect column type
         raw_query = cassandra_session.execute(cql_command)
